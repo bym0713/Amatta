@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+p{
+    color: white;
+}
+a{
+    color: red;
+}
+.fas{
+    padding-top: 10%;
+    padding-left: 20%;
+    font-size: 20rem;
+    
+}
+.wrapper{
+    padding:1%;
+    height: 92vh;
+    background-color: #cecdcd;
+}
+
+#info{
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    grid-template-rows: 1fr 0.1fr;
+    grid-template-areas: 
+    "today list transport"
+    "footer footer footer"
+    ;
+    grid-row-gap: 2%;
+    grid-column-gap:1%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+.today{
+    grid-area: today;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+        "date"
+        "weather"
+    ;
+    grid-row-gap: 2%;
+    height:80%;
+}
+    .date{
+        text-align: center;
+        grid-area: date;
+        background-color: #355C7D;
+        display: flex;
+        flex-direction: column;
+    }
+        .time{
+            height: 30%;
+            display: flex;
+            align-items: flex-end;
+
+        }
+            .clock{
+                height: 100%;
+                width: 100%;
+                font-size: 1.7em;
+    
+            }
+                #clockInfo{
+                    height: 100%;
+                }
+        .week{
+            height: 20%;
+            margin-top: 6%;  
+            font-size: 1.5rem;
+
+        }
+        .day{
+            height: 40%;
+            font-size: 2.5rem;
+
+        }
+
+    .weather{
+        grid-area: weather;
+        background-color: #6C5B7B;
+        background: no-repeat;
+        background-size : cover;
+        display: grid;
+        grid-template-areas:
+            "statement"
+            "degree"
+            "address"
+        ;
+        grid-template-rows: 15fr 40fr 10fr;
+        grid-gap: 15%;
+    }
+        .statement{
+            padding-top: 5%;
+            padding-left: 5%;
+            grid-area: statement;
+            font-size: 1.2rem;
+        
+        }   
+        
+        .degree{
+            grid-area: degree;
+            display: flex;
+        }   
+            .average{
+                
+                padding-left: 10%;
+                font-size: 3rem;
+            
+                width: 70%;
+            }
+
+            .highrow{
+                font-size: 1.5rem;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+            }
+                .high{
+                
+                    height:50%;
+
+                }
+                
+                .row{
+                    color:rgba(255, 255, 255, 0.527);
+                    height:50%;
+                }
+
+        .address{
+            grid-area: address;
+        
+        }
+
+
+.list{
+    grid-area: list;
+    background-color:#C06C84;
+    display: flex;
+    flex-direction: column;
+}
+    .todo{
+        height: 10%;
+        padding-top: 2%;
+        padding-left: 4%;
+        font-size: 1.2rem;
+    }
+    .todoList{
+        height: 90%;
+        padding-top: 2%;
+        padding-left: 4%;
+        font-size: 1.3rem;
+    }
+.transport{
+    grid-area: transport;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-row-gap:2%;
+    grid-template-areas: 
+    "bus"
+    "subway"
+    ;
+    font-size: 1.2rem;
+    
+}
+    .bus{
+        padding-top: 10%;
+        padding-left: 10%;
+        grid-area: bus;
+        background-color: #13808F;
+    }
+
+    .subway{
+        padding-top: 10%;
+        padding-left: 10%;
+        grid-area: subway;
+        background-color:#19A796;
+    }
+
+.footer{
+    grid-area: footer;
+    background-color:#ffffff;
+    text-align: center;
+}
+
+#moto{
+    color: black;
+    padding-top: 1%;
+    font-size: 1.2em;
+}
