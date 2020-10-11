@@ -5,7 +5,7 @@ var busID = document.getElementById("bus");
 var subwayID = document.getElementById("subway");
 
 var database = firebase.database();
-var dataRef = database.ref('SmartHome/raspberryp');
+var dataRef = database.ref('SmartHome/raspberrpi');
 var least_Rssi = dataRef.orderByChild("RSSI").limitToFirst(4);
 
 function sleep (delay) {
